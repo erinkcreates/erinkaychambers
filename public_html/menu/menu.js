@@ -1,21 +1,19 @@
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
 function mobileMenu() {
-    document.getElementById("myDropdown").classList.toggle("show");
-    }
+    document.getElementById("mainMenu").classList.toggle("show");
+}
 
-    // Close the dropdown menu if the user clicks outside of it
-    window.onclick = function(event) {
-    if (!event.target.matches('.menu-button')) {
-        var menuItems = document.getElementsByTagName(ul);
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function (event) {
+    if (!event.target.matches('.menubutton')) {
+        var dropdowns = document.getElementsByClassName("menu-links");
         var i;
-        for (i = 0; i < menuItems.length; i++) {
-        var openDropdown = menuItems[i];
-        if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-        }
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
         }
     }
-} 
-
-// Animated Hamburger Icon
-function menuIcon(x) {
 }
