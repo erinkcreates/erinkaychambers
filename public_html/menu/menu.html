@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="menu2.js"></script>
+    <title>Document</title>
+    <style>
+        @media screen and (max-width: 720px) {
+         /* Dropdown Button */
+        .menu-button {
+        padding: 1rem;
+        border: 1px solid #999;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+
+        /* Dropdown button on hover & focus */
+        .menu-button:hover, .menu-button:focus {
+        background-color: #f6f6f6;
+        }
+
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .menu-links,
+        ul.mobile {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .menu-links a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .menu-links a:hover {background-color: #ddd;}
+
+        /* Show the dropdown menu (use JS to add this class to the .menu-links container when the user clicks on the dropdown button) */
+        .show {display:block;} 
+        }
+
+        /*
+        .main-menu ul {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 1rem;
+            list-style-type: none;
+        }
+
+        @media screen and (max-width: 1279px) {
+
+        }
+        */
+
+        /* Animation */
+        .container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+        
+    </style>
+</head>
+<body>
+<div class="dropdown">
+  <div onclick="mobileMenu();menuIcon(this)" class="menu-button">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+  <ul id="myDropdown" class="menu-links">
+    <li><a href="#education">Education</a></li>
+    <li><a href="#work">Work Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#presentations">Presentations</a></li>
+    <li><a href="#volunteering">Volunteering</a></li>
+    <li><a href="#writing">Writing</a></li>
+    <li><a href="#skills">Skills</a></li>
+  </ul>
+</div>
+</body>
+</html>
