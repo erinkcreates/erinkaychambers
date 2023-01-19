@@ -17,21 +17,20 @@ body {
 	line-height: 1.5rem;
 }
 
-p, li {
-	line-height: 1.5rem;
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6,
+header {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
 }
 
-h1, h2, .subheader {
-	text-transform: uppercase;
-}
-
 h1 {
 	font-size: 3rem;
+	text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
@@ -42,13 +41,14 @@ h1 {
 
 h2 {
 	font-size: 1.75rem;
+	text-transform: uppercase;
 	padding-top: 1rem;
 	padding-bottom: 1.25rem;
 }
 
 h3 {
 	font-size: 1.25rem;
-	line-height:1.25rem;
+	line-height: 1.25rem;
 	margin-top: 0;
 
 }
@@ -57,8 +57,6 @@ h4 {
 	font-size: 1.1rem;
 }
 
-
-
 /* Wrappers */
 
 .inner-wrapper {
@@ -66,9 +64,17 @@ h4 {
 	margin-right: 12%;
 }
 
+.site-header button {
+	margin-right: 12%;
+}
+
 @media screen and (max-width: 480px) {
 	.inner-wrapper {
 		margin-left: 3%;
+		margin-right: 3%;
+	}
+
+	.site-header button {
 		margin-right: 3%;
 	}
 }
@@ -78,11 +84,18 @@ h4 {
 		margin-left: 5%;
 		margin-right: 5%;
 	}
+	.site-header button {
+		margin-right: 5%;
+	}
 }
 
 @media screen and (max-width: 960px) {
 	.inner-wrapper {
 		margin-left: 7%;
+		margin-right: 7%;
+	}
+
+	.site-header button {
 		margin-right: 7%;
 	}
 }

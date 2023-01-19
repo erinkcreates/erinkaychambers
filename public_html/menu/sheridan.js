@@ -1,11 +1,7 @@
 var menuToggle = document.querySelector("#menu-toggle");
 var menu = document.querySelector("#menu");
 
-var enterKeyCode = 13;
-var spaceKeyCode = 32;
-
-menuToggle.addEventListener("keyup", function(event) {
-    if(event.keyCode == enterKeyCode || event.keyCode == spaceKeyCode) {
+menuToggle.addEventListener("click", function(event) {
         var menuOpen = menu.checked;
 
         if(menuOpen) {
@@ -13,5 +9,4 @@ menuToggle.addEventListener("keyup", function(event) {
         } else {
             menu.checked = true;
         }
-    }
 });
