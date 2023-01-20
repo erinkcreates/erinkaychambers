@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Arial';
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            background: #015289;
+            padding: 1em;
+            color: #fff;
+        }
+
+        header   a {
+            color: inherit;
+        }
+
+        h1 {
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }
+
+        button {
+            position: absolute;
+            right: 1em;
+            top: 0.8em;
+            padding: 8px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            font-size: 1em;
+            background: transparent;
+            color: #fff;
+            display: none;
+        }
+
+        button:focus,
+        button:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        nav {
+            border-top: 1px solid transparentize(#fff, 0.4);
+            padding: 1em 1em 0;
+        }
+
+        nav li {
+            margin-bottom: 1em;
+        }
+
+        nav a {
+            display: block;
+        }
+
+        .js ul {
+            display: none;
+        }
+
+        .js button {
+            display: block;
+        }
+
+        ul.is-active {
+            display: block;
+        }
+
+        @media screen and (min-width: 960px) {
+            .js ul {
+                display: block;
+            }
+
+            .js button {
+                display: none;
+            }
+
+            button {
+                display: none;
+            }
+
+            nav {
+                padding-left: 0;
+            }
+            nav li {
+                    display: inline-block;
+                    margin-right: 1em;
+                }
+            }
+        
+    </style>
+</head>
+
+<body>
+    <header class="js">
+        <h1>
+            <a href="#">Logo</a>
+        </h1>
+        <nav role="navigation">
+            <button id="toggle" aria-expanded="false">Menu</button>
+            <ul id="menu" class="main-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Works</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        var toggle = document.querySelector('#toggle');
+var menu = document.querySelector('#menu');
+var menuItems = document.querySelectorAll('#menu li a');
+
+toggle.addEventListener('click', function() {
+  if (menu.classList.contains('is-active')) {
+    this.setAttribute('aria-expanded', 'false');
+    menu.classList.remove('is-active');
+  } else {
+    menu.classList.add('is-active'); 
+    this.setAttribute('aria-expanded', 'true');
+    //menuItems[0].focus();
+  }
+});
+</script>
+
+</body>
+
+</html>
